@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/signIn.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/ec35368b02.js"
+      crossorigin="anonymous"
+    ></script>
+    >
+    <title>Harry Potter</title>
+    <!--peut changer-->
+  </head>
+  <body>
+    <header>
+      <!--nav avec DARKMODE-->
+      <div class="head">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo_blanc.png" alt="Logo" />
+          <p class="show">Home</p>
+          <p class="hidden">Home</p>
+        </a>
+        <h1 class="title">Harry Potter</h1>
+        <a href="profile.html">
+          <img
+            class="icone"
+            src="assets/img/utilisateur_blanc.png"
+            alt="Retour a la connexion"
+          />
+          <p class="show">Connexion</p>
+          <p class="hidden">Connexion</p>
+        </a>
+      </div>
+      <nav>
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="collection.html">Collection</a>
+          </li>
+          <li>
+            <a href="profile.html">Profil</a>
+          </li>
+          <li>
+            <a href="booster.html">Booster</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <form id="formulaire" class="form-connection" action="">
+        <h1>Connexion :</h1>
+
+        <h1 style="display: none" id="erreur"></h1>
+        <label>Entrer votre Email :</label>
+        <input id="email" type="email" name="email" placeholder="email" />
+
+        <label>Entrer votre mot de passe :</label>
+        <input
+          id="password"
+          type="password"
+          name="password"
+          placeholder="Mot de passe"
+        />
+
+        <div class="bottom">
+          <button class="connexion" type="submit">Se connecter</button>
+          <hr />
+          <button class="inscription">
+            <a href="signUp.html">Je n'ai pas de compte</a>
+          </button>
+        </div>
+      </form>
+      <img class="form-img" src="assets/img/form_img_1024.jpg" alt="" />
+    </main>
+
+    <footer>
+      <p>&copy; Harry Potter</p>
+      <p>
+        Contact : <em>Ne nous contactez pas <strong>MERCI</strong></em>
+      </p>
+      <p>Mentions légales : Je sais meme pas ce que ca veut dire</p>
+      <p>FAQ : Personne pose de question c'est rapide</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/vanilla.filterizr.min.js"></script>
+    <script src="assets/javascript/header.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/signIn.js"></script>
+  </body>
+</html>

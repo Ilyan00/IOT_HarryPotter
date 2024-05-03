@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "HarryPotter";
+  src: url(../font/HARRYP__.TTF);
+}
+
+* {
+  appearance: none;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.form-img {
+  content: url("../img/form_img_1024.jpg");
+  position: absolute;
+  top: 4vw;
+  width: 100%;
+  z-index: -1;
+}
+
+.form-connection {
+  color: white;
+  margin-top: 4vw;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 50vw;
+  padding: 3vw;
+  border-radius: 1vw;
+  border: 1px solid rgb(222 200 200 / 40%);
+  background: rgb(100 100 100 / 40%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(52, 52, 52, 0.3) 42%,
+    rgba(146, 146, 146, 0.3) 100%
+  );
+  backdrop-filter: blur(10px);
+  margin-bottom: 4vw;
+}
+
+.form-connection #erreur {
+  color: #ae0001;
+}
+
+.form-connection input,
+.form-connection label {
+  margin: 1vw;
+  width: 48vw;
+}
+
+.form-connection input {
+  appearance: none;
+  display: flex;
+  height: 2vw;
+  color: white;
+  background-color: black;
+  border-radius: 2vw;
+  border: 0.2vw solid #b89e14;
+}
+
+.form-connection input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  padding: 1vw;
+  transition: color 0.2s ease;
+}
+
+.form-connection input:hover::placeholder {
+  color: rgba(255, 255, 255, 1);
+}
+
+.form-connection input:hover {
+  transition: 0.2s ease;
+  transform: scale(1.1);
+  border: 0.2vw solid #ffd700;
+}
+
+.form-connection input:focus {
+  border: 0.2vw solid white;
+}
+
+.form-connection h1 {
+  font-family: "HarryPotter", Arial;
+  font-size: 3em;
+  letter-spacing: 0.5rem;
+  align-self: center;
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+  border: solid 0.2vw #b89e14;
+  border-radius: 1vw;
+  width: 50vw;
+  height: 3vw;
+  background-color: #0e1a40;
+}
+
+.bottom hr {
+  border: 0;
+  border: 0.15vw solid #b89e14;
+}
+
+.bottom button {
+  appearance: none;
+  background: none;
+  border: none;
+}
+
+.connexion {
+  font-size: 1em;
+  width: 30vw;
+  height: 3vw;
+  color: white;
+}
+
+.inscription {
+  width: 20vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.inscription a {
+  font-size: 1.2em;
+  width: 30vw;
+  height: 3vw;
+  text-decoration: none;
+  color: white;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS pour le DARK MODE*/
+
+.light-mode .form-connection {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(216, 216, 216, 0.3) 42%,
+    rgba(178, 178, 178, 0.3) 100%
+  );
+  color: black;
+}
+
+.light-mode input {
+  color: black;
+  background-color: white;
+  border: 0.2vw solid #ffd700;
+}
+
+.light-mode input::placeholder {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.light-mode input:hover::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.light-mode input:hover {
+  transition: 0.2s ease;
+  border: 0.2vw solid #b89e14;
+}
+
+.light-mode input:focus {
+  border: 0.2vw solid black;
+}
+
+.light-mode .bottom {
+  border: solid 0.2vw #ffd700;
+}
+
+.light-mode hr {
+  border: 0.15vw solid #ffd700;
+}
+
+.light-mode .connexion,
+.light-mode .inscription a {
+  color: white;
+}
+
+.light-mode .bottom {
+  background-color: #ae0001;
+}
+
+@media all and (max-device-width: 1024px) {
+  .form-connection input:hover {
+    transform: scale(1);
+  }
+}
+
+@media all and (max-device-width: 1020px) {
+  .form-img {
+    content: url("../img/form_img_768.jpg");
+    top: 5vw;
+  }
+  .form-connection {
+    width: 57vw;
+  }
+  .form-connection input,
+  .form-connection label {
+    margin: 1vw;
+    width: 55vw;
+  }
+  .bottom {
+    width: 56vw;
+    height: 3vw;
+  }
+  .connexion {
+    font-size: 0.7em;
+    width: 33vw;
+    height: 3vw;
+  }
+
+  .inscription {
+    width: 23vw;
+    height: 3vw;
+  }
+
+  .inscription a {
+    font-size: 0.7em;
+    width: 30vw;
+    height: 3vw;
+  }
+  .form-connection input::placeholder {
+    font-size: 0.7em;
+  }
+}
+
+@media all and (max-device-width: 728px) {
+  .form-img {
+    content: url("../img/form_img_728.jpg");
+    top: 8vw;
+  }
+  .form-connection h1 {
+    font-size: 2.2em;
+  }
+  .form-connection label {
+    margin: 5vw 0 2vw 1vw;
+  }
+  .form-connection input {
+    margin: 0 0 2vw 1vw;
+    height: 4vw;
+  }
+  .connexion {
+    font-size: 0.5em;
+  }
+
+  .inscription a {
+    font-size: 0.6em;
+  }
+}

@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "HarryPotter";
+  src: url(../font/HARRYP__.TTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+#info-presentation {
+  background: rgb(100 100 100 / 40%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(52, 52, 52, 0.3) 42%,
+    rgba(146, 146, 146, 0.3) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 1vw;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, 0);
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#info-presentation h1 {
+  font-family: "HarryPotter", Arial;
+  font-size: 2em;
+}
+
+.div-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 5vw;
+}
+
+.paralax {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.paralax::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+}
+
+.paralax img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.paralax img#buisson {
+  z-index: 10;
+}
+
+footer {
+  z-index: 11;
+  transform: translateY(-1.2vw);
+}
+
+/* CSS pour le DARK MODE*/
+
+.light-mode #info-presentation {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(216, 216, 216, 0.3) 42%,
+    rgba(178, 178, 178, 0.3) 100%
+  );
+  color: black;
+}
+
+@media all and (max-device-width: 1024px) {
+  .paralax #montagne_front {
+    display: none;
+  }
+
+  #info-presentation {
+    height: 77vh;
+  }
+}
+
+@media all and (max-device-width: 768px) {
+  #info-presentation {
+    height: 102vh;
+  }
+}
+
+@media all and (max-device-width: 728px) {
+  .paralax {
+    display: none;
+  }
+
+  #info-presentation {
+    height: 66vh;
+    position: relative;
+  }
+}

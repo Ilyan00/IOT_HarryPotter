@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/ec35368b02.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <!--nav avec DARKMODE-->
+      <div class="head">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo_blanc.png" alt="Logo" />
+          <p class="show">Home</p>
+          <p class="hidden">Home</p>
+        </a>
+        <h1 class="title">Harry Potter</h1>
+        <a href="profile.html">
+          <img
+            class="icone"
+            src="assets/img/utilisateur_blanc.png"
+            alt="Retour a la connexion"
+          />
+          <p class="show">Connexion</p>
+          <p class="hidden">Connexion</p>
+        </a>
+      </div>
+      <nav>
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="collection.html">Collection</a>
+          </li>
+          <li>
+            <a href="profile.html">Profil</a>
+          </li>
+          <li>
+            <a href="booster.html">Booster</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Div pour ouverture booster-->
+    <div id="booster-container">
+      <div id="carte-template" style="display: none">
+        <h2 class="carte-nom">Harry Potter</h2>
+        <h2 class="carte-maison">Grifond</h2>
+        <img class="carte-img" src="" alt="" />
+        <a class="carte-details-link" href="details.html?slug="
+          >Voir les détails</a
+        >
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <h1>Envoyer une carte</h1>
+        <span class="close">&times;</span>
+        <form class="input-div">
+          <div class="auto">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Déstinataire"
+              required
+            />
+            <div class="auto-items" id="auto-items-contact"></div>
+          </div>
+          <div class="auto">
+            <input
+              type="text"
+              id="inputAuto"
+              placeholder="Carte à envoyer"
+              required
+            />
+            <div class="auto-items" id="auto-items"></div>
+          </div>
+          <button type="submit" id="envoyer">Envoyer une carte</button>
+        </form>
+      </div>
+    </div>
+
+    <button id="openModalBtn">
+      <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </button>
+
+    <footer>
+      <p>&copy; Harry Potter</p>
+      <p>
+        Contact : <em>Ne nous contactez pas <strong>MERCI</strong></em>
+      </p>
+      <p>Mentions légales : Je sais meme pas ce que ca veut dire</p>
+      <p>FAQ : Personne pose de question c'est rapide</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/vanilla.filterizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/header.js"></script>
+    <script src="assets/javascript/booster.js"></script>
+  </body>
+</html>

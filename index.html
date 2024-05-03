@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harry Potter</title>
+    <!--peut changer-->
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
+    <script
+      src="https://kit.fontawesome.com/ec35368b02.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--content avec slider-->
+    <header>
+      <!--nav avec DARKMODE-->
+      <div class="head">
+        <a href="index.html">
+          <img class="logo" src="assets/img/logo_blanc.png" alt="Logo" />
+          <p class="show">Home</p>
+          <p class="hidden">Home</p>
+        </a>
+        <h1 class="title">Harry Potter</h1>
+        <a href="profile.html">
+          <img
+            class="icone"
+            src="assets/img/utilisateur_blanc.png"
+            alt="Retour a la connexion"
+          />
+          <p class="show">Connexion</p>
+          <p class="hidden">Connexion</p>
+        </a>
+      </div>
+      <nav>
+        <!-- Icône du menu burger -->
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <ul class="nav-menu">
+          <li>
+            <a href="collection.html">Collection</a>
+          </li>
+          <li>
+            <a href="profile.html">Profil</a>
+          </li>
+          <li>
+            <a href="booster.html">Booster</a>
+          </li>
+          <li>
+            <label class="switch">
+              <input type="checkbox" />
+              <span></span>
+            </label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="swiper">
+        <h1 class="swiper-titre">Les nouvelles cartes disponibles</h1>
+
+        <swiper-container
+          class="mySwiper"
+          direction="vertical"
+          pagination="true"
+          pagination-clickable="true"
+        >
+          <swiper-slide>
+            <h1>Harry Potter</h1>
+            <a href="detail.html?slug=harry-potter">
+              <img
+                src="https://hp-api.lainocs.fr/images/harry-potter.png"
+                alt="harry-potter"
+              />
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <h1>Ron Weasley</h1>
+            <a href="detail.html?slug=ron-weasley">
+              <img
+                src="https://hp-api.lainocs.fr/images/ron-weasley.webp"
+                alt="2"
+              />
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <h1>Draco Malfoy</h1>
+            <a href="detail.html?slug=draco-malfoy">
+              <img
+                src="https://hp-api.lainocs.fr/images/draco-malfoy.webp"
+                alt="3"
+              />
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <h1>Hermione Granger</h1>
+            <a href="detail.html?slug=hermione-granger">
+              <img
+                src="https://hp-api.lainocs.fr/images/hermione-granger.png"
+                alt="4"
+              />
+            </a>
+          </swiper-slide>
+          <swiper-slide>
+            <h1>Minerva Mcgonagall</h1>
+            <a href="detail.html?slug=minerva-mcgonagall">
+              <img
+                src="https://hp-api.lainocs.fr/images/minerva-mcgonagall.png"
+                alt="5"
+              />
+            </a>
+          </swiper-slide>
+        </swiper-container>
+      </div>
+
+      <div class="cards-container">
+        <!--Div pour tab filtrer par maison-->
+        <h1>Les cartes les plus aimees</h1>
+        <div class="filters">
+          <ul class="filters-contain">
+            <li data-filter="all" class="active">Tout</li>
+            <li data-filter="Gryffindor">Gryffindor</li>
+            <li data-filter="Hufflepuff">Hufflepuff</li>
+            <li data-filter="Ravenclaw">Ravenclaw</li>
+            <li data-filter="Slytherin">Slytherin</li>
+          </ul>
+        </div>
+        <!--Div pour tab carte-->
+        <div class="ecole-elements">
+          <div
+            class="card filtr-item"
+            id="card-filtr-item"
+            data-category="Gryffindor"
+          >
+            <div class="card-header">
+              <p class="card-title">Gryffondor</p>
+              <div class="card-axe">Harry Potter</div>
+              <a href="detail.html?slug=harry-potter">
+                <img
+                  src="https://hp-api.lainocs.fr/images/harry-potter.png"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="card filtr-item"
+            id="card-filtr-item"
+            data-category="Hufflepuff"
+          >
+            <div class="card-header">
+              <p class="card-title">Poufsouffle</p>
+              <div class="card-axe">Cedric Diggory</div>
+              <a href="detail.html?slug=cedric-diggory">
+                <img
+                  src="https://hp-api.lainocs.fr/images/cedric-diggory.webp"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="card filtr-item"
+            id="card-filtr-item"
+            data-category="Ravenclaw"
+          >
+            <div class="card-header">
+              <p class="card-title">Serdaigle</p>
+              <div class="card-axe">Gilderoy Lockhart</div>
+              <a href="detail.html?slug=gilderoy-lockhart">
+                <img
+                  src="https://hp-api.lainocs.fr/images/gilderoy-lockhart.png"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="card filtr-item"
+            id="card-filtr-item"
+            data-category="Slytherin"
+          >
+            <div class="card-header">
+              <p class="card-title">Serpentard</p>
+              <div class="card-axe">Draco Malfoy</div>
+              <a href="detail.html?slug=draco-malfoy">
+                <img
+                  src="https://hp-api.lainocs.fr/images/draco-malfoy.webp"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div>
+          <div
+            class="card filtr-item"
+            id="card-filtr-item"
+            data-category="Slytherin"
+          >
+            <div class="card-header">
+              <p class="card-title">Serpentard</p>
+              <div class="card-axe">Severus Snape</div>
+              <a href="detail.html?slug=severus-snape">
+                <img
+                  src="https://hp-api.lainocs.fr/images/severus-snape.webp"
+                  alt="Image"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h1>Envoyer une carte</h1>
+          <span class="close">&times;</span>
+          <form class="input-div">
+            <div class="auto">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Déstinataire"
+                required
+              />
+              <div class="auto-items" id="auto-items-contact"></div>
+            </div>
+            <div class="auto">
+              <input
+                type="text"
+                id="inputAuto"
+                placeholder="Carte à envoyer"
+                required
+              />
+              <div class="auto-items" id="auto-items"></div>
+            </div>
+            <button type="submit" id="envoyer">Envoyer une carte</button>
+          </form>
+        </div>
+      </div>
+
+      <button id="openModalBtn">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+      </button>
+    </main>
+
+    <footer>
+      <p>&copy; Harry Potter</p>
+      <p>
+        Contact : <em>Ne nous contactez pas <strong>MERCI</strong></em>
+      </p>
+      <p>Mentions légales : Je sais meme pas ce que ca veut dire</p>
+      <p>FAQ : Personne pose de question c'est rapide</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.1/simple-lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/2.2.4/vanilla.filterizr.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/header.js"></script>
+  </body>
+</html>
